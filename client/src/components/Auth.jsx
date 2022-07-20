@@ -4,13 +4,15 @@ import axios from 'axios';
 
 import signinImage from '../assets/signup.jpg'
 
+const cookies = new Cookies();
+
 const initialState = {
     fullName: '',
     username: '',
     password: '',
     confirmPassword: '',
     phoneNumber: '',
-    avatarURL: ''
+    avatarURL: '',
 }
 
 const Auth = () => {
@@ -23,10 +25,29 @@ const Auth = () => {
         console.log(form);
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        console.log(form);
+        const { fullName, username, password, phoneNumber, avatarURL } = form;
+
+        const URL = 'http://localhost:5000/auth';
+
+        const { data: { token, userId, hashedPassword } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
+            username, password, fullName, phoneNumber, avatarURL,
+        });
+
+        cookies.set('token', token);
+        cookies.set('username', username);
+        cookies.set('fullName', fullName);
+        cookies.set('userId', userId);
+
+        if(isSignup) {
+            cookies.set('phoneNumber', phoneNumber);
+            cookies.set('avatarURL', avatarURL);
+            cookies.set('hashedPassword', hashedPassword);
+        }
+
+        window.location.reload();
     }
 
     const switchMode = () => {
