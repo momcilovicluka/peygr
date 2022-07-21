@@ -2,6 +2,8 @@
     --primary-color: #000090;
     --primary-color-alpha: #0000601a;
     --color-first: #005fff;
+    --color-second: #040036;
+    --color-background-new: #001eff;
     --color-small-shadow: rgba(0, 0, 0, 0.05);
     --color-small-bigger-shadow: rgba(0, 0, 0, 0.06);
     --color-small8: rgba(0, 0, 0, 0.08);
@@ -10,8 +12,11 @@
     --color-shadow-plus: rgba(0, 0, 0, 0.25);
     --color-shadow-medium: rgba(0, 0, 0, 0.33);
     --color-background: #ffffff;
+    --color-svg: #ffffff;
+    --color-placeholder: #777777;
+    --color-wait: #adadad;
     --color-empty: #858688;
-    --color-header: #2c2c30;
+    --color-header: #00002e;
     --color-icon-divider: rgba(204, 204, 204, 0.5);
     --color-header-title: rgba(255, 255, 255, 0.66);
     --color-input-wrapper: #f7f6f8;
@@ -32,6 +37,18 @@ body {
 
 #root {
     height: 100%;
+}
+
+svg {
+    fill: var(--color-background);
+}
+
+.str-chat__input-flat-emojiselect svg {
+    fill: var(--color-svg);
+}
+
+.str-chat__input-flat .rfu-file-upload-button svg {
+    fill: var(--color-svg);
 }
 
 .auth__form-container {
@@ -217,6 +234,10 @@ body {
     height: 100%;
     /* border-radius: 16px; */
     box-shadow: var(--color-shadow-medium) 0px 1px 4px 0px;
+}
+
+.str-chat {
+    color: var(--color-background);
 }
 
 .str-chat-channel-list {
@@ -861,7 +882,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background: var(--color-background);
+    background: var(--color-background-new);
     box-shadow: 0px 1px 0px var(--color-shadow1);
     border-top-right-radius: 16px;
     z-index: 1;
@@ -874,13 +895,14 @@ body {
 
 .team-channel-header__channel-wrapper svg {
     cursor: pointer;
+    fill: var(--color-svg);
 }
 
 .team-channel-header__name {
     font-family: Helvetica Neue, sans-serif;
     font-weight: bold;
     font-size: 18px;
-    color: var(--color-header);
+    color: var(--color-background);
     margin-right: 8px;
 }
 
@@ -946,7 +968,7 @@ body {
 .team-channel-header__right-text {
     font-family: Helvetica Neue, sans-serif;
     font-size: 14px;
-    color: var(--color-empty);
+    color: var(--color-pinned-message);
 }
 
 .team-channel-list {
@@ -1071,7 +1093,7 @@ body {
     font-style: normal;
     font-weight: normal;
     line-height: 120%;
-    color: var(--color-black);
+    color: var(--color-message-team);
     margin: 0;
     background: none;
 }
@@ -1123,6 +1145,14 @@ body {
     padding-left: 20px;
 }
 
+.livestream.str-chat .str-chat__thread-header, .str-chat .str-chat__thread-header {
+    background-color: var(--color-background-new);
+}
+
+.team.str-chat .str-chat__thread {
+    background-color: var(--color-background-new);
+}
+
 .str-chat__message-replies-count-button {
     z-index: 2;
     display: flex;
@@ -1147,6 +1177,10 @@ body {
     font-family: Helvetica Neue, sans-serif;
     font-style: normal;
     font-weight: normal;
+}
+
+.str-chat__date-separator-line {
+    background-color: var(--color-background);
 }
 
 .str-chat__avatar-image img.str-chat__avatar-image--loaded {
@@ -1553,7 +1587,7 @@ div.rta__autocomplete.str-chat__emojisearch {
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
-    color: var(--color-header);
+    color: var(--color-background);
     margin-right: 10px;
 }
 
@@ -1744,9 +1778,26 @@ div.rta__autocomplete.str-chat__emojisearch {
     transition: 0.8s ease;
 }
 
+.str-chat__input-flat .str-chat__textarea>textarea {
+    background: var(--color-second);
+}
+
+textarea:focus {
+    color: var(--color-background) !important;
+}
+
+textarea::placeholder {
+    color: var(--color-placeholder) !important;
+}
+
+.str-chat__input-flat .str-chat__textarea>textarea {
+    color: var(--color-wait);
+}
+
 .str-chat__input-flat {
     width: 100%;
     padding: 10px;
+    background: var(--color-background-new);
 }
 
 @media screen and (max-width: 960px) {
