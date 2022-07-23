@@ -1,4 +1,37 @@
-# Getting Started with Create React App
+# <a href="https://peygr.netlify.app/" target="_blank">Peygr</a>
+![Lines of code](https://img.shields.io/tokei/lines/github/momcilovicluka/peygr)
+![GitHub repo size](https://img.shields.io/github/repo-size/momcilovicluka/peygr)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/momcilovicluka/peygr)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2a4d98f1-5cf4-4b8f-b3f3-84ab7e9bee36/deploy-status)](https://app.netlify.com/sites/peygr/deploys)
+
+Peygr is a pager like chat app made with [React](https://reactjs.org/) and [Stream API](https://getstream.io/)
+
+It's main intent is to be used in hospitals as a pager for doctors to communicate
+
+* Back end is hosted on [Heroku](https://peygr.herokuapp.com/)
+* Front end is hosted on [Netlify](https://peygr.netlify.app/)
+
+# Project structure
+
+This is the main project repo. Project is organised into two parts:
+* [Client](https://github.com/momcilovicluka/peygr-front-end) (Front end)
+* [Server](https://github.com/momcilovicluka/peygr-back-end) (Back end)
+
+Both client and server are in their respective repos which have been added as submodules to this repo for easier CI with [Heroku](https://www.heroku.com/) and [Netlify](https://www.netlify.com/)
+
+# Get Started
+
+### `npm init -y` - Initialize the react app
+
+### `npm install` - Install dependencies (must be done in both client (front-end) and server (back-end) folders)
+
+### `npm start` - In the client to start it (same as node index.js)
+* Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### `npm run dev` - In the server to start it (same as nodemon index.js)
+* Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
+
+# Getting Started with Create React App (Automatically generated)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
