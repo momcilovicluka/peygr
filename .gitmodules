@@ -1,0 +1,6 @@
+[submodule "peygr-back-end"]
+	path = peygr-back-end
+	url = https://github.com/momcilovicluka/peygr-back-end
+[submodule "peygr-front-end"]
+	path = peygr-front-end
+	url = https://github.com/momcilovicluka/peygr-front-end
