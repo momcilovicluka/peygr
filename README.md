@@ -2,6 +2,7 @@
 ![Lines of code](https://img.shields.io/tokei/lines/github/momcilovicluka/peygr)
 ![GitHub repo size](https://img.shields.io/github/repo-size/momcilovicluka/peygr)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/momcilovicluka/peygr)
+[![GitHub Super-Linter](https://github.com/momcilovicluka/peygr/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2a4d98f1-5cf4-4b8f-b3f3-84ab7e9bee36/deploy-status)](https://app.netlify.com/sites/peygr/deploys)
 
 Peygr is a pager like chat app made with [React](https://reactjs.org/) and [Stream API](https://getstream.io/)
